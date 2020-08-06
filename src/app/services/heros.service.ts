@@ -62,10 +62,14 @@ export class HerosService {
      getHeros(){
          return this.heros;
      }
+
+     getHero(id: string){
+       return this.heros[id];
+     }
 }
 
 
-export interface Hero{
+export interface Hero {
     nombre: string;
     bio: string;
     img: string;
