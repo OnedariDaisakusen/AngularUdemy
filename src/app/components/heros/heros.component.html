@@ -1,0 +1,18 @@
+<h1>Heros <small>Marvel y DC</small></h1>
+
+<div class="card-columns">
+    <div class="card" *ngFor="let hero of heros; let i = index">
+        <img src="{{ hero.img }}" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">{{ hero.nombre }}</h5>
+            <p class="card-text">{{ hero.bio }}</p>
+            <p class="card-text"><small class="text-muted">{{ hero.aparicion }}</small></p>
+            <p class="card-text"><small class="text-muted">{{ hero.casa }}</small></p>
+
+
+            <button type="button" class="btn btn-primary btn-block" (click)="verHero(i)">Ver más</button>
+            <!-- <a [routerLink]="['/hero',i]" class="btn btn-outline-primary btn-block">Ver mas...</a> -->
+        </div>
+    </div>
+
+</div>
